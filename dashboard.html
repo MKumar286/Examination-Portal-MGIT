@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Student Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>MGIT</h1>
+
+<h2>Student Dashboard</h2>
+
+<h3 id="studentName"></h3>
+
+<hr>
+
+<button>TCS Mock Test</button>
+
+<br><br>
+
+<button>Accenture Mock Test</button>
+
+<br><br>
+
+<button>Infosys Mock Test</button>
+
+<br><br>
+
+<button>Practice Test</button>
+
+<br><br>
+
+<button>My Results</button>
+
+<br><br>
+
+<button onclick="logout()">
+Logout
+</button>
+
+</div>
+
+<script>
+
+document.getElementById("studentName").innerHTML=
+localStorage.getItem("name");
+
+function logout(){
+
+localStorage.clear();
+
+window.location="index.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
