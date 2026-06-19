@@ -17,9 +17,13 @@ fetch(url)
 
 if(data.status=="success"){
 
-document.getElementById("msg").innerHTML=
-"Welcome "+data.name+
-" ("+data.branch+")";
+localStorage.setItem("name",data.name);
+
+localStorage.setItem("branch",data.branch);
+
+localStorage.setItem("year",data.year);
+
+window.location="dashboard.html";
 
 }
 else{
